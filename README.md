@@ -81,12 +81,14 @@ Some JavaScript code
 ```
 
 * **Explain what needs to happen to get a JavaScript program to "run", given the JavaScript you've seen in this assignment.**
+
 You need to tell the program that you are writing in javascript so that the program will run. Within the <script> tag and </script> closing tag, the javascript code should be written.
 ```
 <script type="text/javascript"> write code between these lines </script>
 ```
 
 * **What functions in JavaScript seem to be similar in function to the `print` function in Python? (There are two.) Why might you use one and not the other? Explain briefly.**
+
 The console.log() function is similar to the print function in Python. This statement is for humans to see in the console section of the webpage. The alert() function is also similar to the print function - it is a pop-up box on the webpage.
 ```
 console.log()
@@ -94,30 +96,36 @@ alert()
 ```
 
 * **What code would have to comment out to get rid of the pop-up box when you load the page? (Related to the last question.) Do that in the code file, and then, add code so that a text box will appear that contains the current date and time! *HINT:* Look through the rest of the code first...**
+
 In order to remove the pop-up box when you load the page, you have to comment out the alert("hello") line. In order to make the pop-up box work with the current date/time you have to add the following line:
 ```
 alert(Date());
 ```
 
 * **How can you put your own name at the top where it currently says "A name"? Explain very briefly how to do so, and replace `A name` in the web page with your own name.**
+
 Replace document.querySelector('h1').innerHTML ='a name' with your own name. So document.querySelector('h1').innerHTML = "Kendall"
 
 * **What does the word `document` represent in this code? Explain briefly.**
+
 Document represents the document object. Document objects can have various properties. There are document attributes (such as document.baseURI or document.title) and document methods (such as document.getElementById()).  
 
 * **What is happening in line 12 (
 		`document.querySelector('#items').innerHTML = document.getElementsByTagName('li').length`
 )? Explain, briefly (<= 2 sentences).**
+
 The document.querySelector('#items').innerHTML selects the id 'items,' which will update that information to the length of the li. The document.getElementByTagName('li').length selects all the li tags and returns how many li tags there are.
 
 * **What color would the background of this page be <u> if there were no JavaScript in this page</u>?**
+
 The background color would be white if there was no JavaScript.
 
-
 * **Why are there a couple of gray boxes on the screen with a different colored border? How could you edit this code to make them a different color? Explain briefly. Then edit the code to make those boxes some shade of blue, of your choosing.**
+
 The gray boxes are on the screen with a white border because of the code within the html <style></style> section. The box is gray because of the background-color is set to #b3b3b3. The box border is set to white because the border color is set to #FFFFFF. To change the background-color to a light blue I changed it from #b3b3b3 to #a3d4f7. To change the border color to a dark blue I changed it from #FFFFFF to #1137f7.
 
 * **Edit the code so that, if you highlight `McGill University` and copy it, you see the text `O Canada` near the bottom of the page. Briefly explain why you made the edits that you did -- how did you know/figure out what to do?**
+
 I made a new function called newcopyFunction(). Within the li for McGill University I added oncopy="newcopyFunction()". In the JavaScript <script></script> section I added the new function newcopyFunction() and added document.querySelector('#cheer').innerHTML += "O Canada<br>";. This selected the cheer id and allowed O Canada to be returned when McGill University is copied. In order to do this, I referenced the University of Michigan copyFunction() example.
 
 * **In the original code, when you click the button that says `Wow`, you see a text box! Wow. Explain briefly in your own words why the following code causes that to happen:**
