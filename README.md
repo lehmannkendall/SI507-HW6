@@ -182,7 +182,7 @@ $(document).ready(function(){
     $("form").submit(function(event){
 ```
 
-The first line lets jQuery detect the state of readiness. The ready() part makes the function available after the document is loaded. The code included within the $(document).ready() will only run once the page is ready for the JavaScript code to execute.
+In order to find what these lines of code were doing, I typed each line into google to see if there were any answers about what these lines do. I also typed in 'jquery ready function' and 'jquery submit function'. I found various websites with the answers to this question. The first line lets jQuery detect the state of readiness. The ready() part makes the function available after the document is loaded. The code included within the $(document).ready() will only run once the page is ready for the JavaScript code to execute.
 The second line is a function that is attached to the submit event, which allows if/else if/else statement to be implemented on the webpage.
 
 
