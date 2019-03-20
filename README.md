@@ -157,11 +157,23 @@ alert("March 20, 2019");
 
 * **When you enter input that isn't valid, you see an error that is red. Why is the error in red? Why is the response for valid inputs blue?**
 
+The error message is red because the class 'error' is referenced if the input is not valid within the if statement. The CSS code for this error message .error is set to red, therefore the message on the webpage will be red.
+
+The response for valid input is blue because the class 'good' is referenced if the input is valid within the else statement. The CSS code for this valid message .good is set to blue, therefore the message on the webpage will be blue.
+
 * **What is this line `var regex = /^[a-zA-Z]+$/;` helping with? And if you googled something to figure that out, what did you google, and what, briefly, did you learn? (If you didn't need to google, you can leave that out, but explain briefly what that line is helping the program do, anyway.)**
+
+That line checks to see if the string entered by the user contains letters. I found this answer through google by searching /^[a-zA-Z]+$/ and finding an answer on stack overflow that highlighted the difference between /^[a-zA-Z]+$/ and /[^a-zA-Z]+$/.
 
 * **What's different about the syntax of conditional statements in JavaScript, compared to Python?**
 
+Python: spacing/indents matters, use colons :, there are if/elif/else statements
+
+JavaScript: spacing/indents don't matter, use of curly brackets {} and statement after if() has to have the parentheses, there are if/if else/else statements
+
 * **What do you think the `10000` refers to in the code `.fadeOut(10000)`?**
+
+1000 refers to the speed that the fadeout should occur at.
 
 * **What do you think is going on with the following code at the beginning of the program? Note that the most important thing to do for answering this question is to be thoughtful and clear, not to be absolutely correct:**
 
@@ -170,6 +182,16 @@ $(document).ready(function(){
     $("form").submit(function(event){
 ```
 
+The first line lets jQuery detect the state of readiness. The ready() part makes the function available after the document is loaded. The code included within the $(document).ready() will only run once the page is ready for the JavaScript code to execute.
+The second line is a function that is attached to the submit event, which allows if/else if/else statement to be implemented on the webpage.
+
 
 * **Add some code to the `jquerylib_submit_example.html` file so that, if the input is valid and is specifically the text `hello`, rather than the visible output being `Nice!` in blue, the visible output should be `Hello to you too!`, also in blue, just like `Nice!` is.**
 	* *HINT:* You'll have to make some changes to the conditional statement, and possibly look up some JavaScript conditional syntax. You'll also need to look carefully at what generates visible output right now.
+
+I added an else if statement between the provided if and else statements. In this else if statement I checked the variable currentValue variable that the user entered and if it equaled 'hello', then the return statement should show 'Hello to you too!'.
+
+```
+else if (currentValue == "hello") {
+		$("#result").html('<p class="good">Hello to you too!</p>').show().fadeOut(10000);
+```
